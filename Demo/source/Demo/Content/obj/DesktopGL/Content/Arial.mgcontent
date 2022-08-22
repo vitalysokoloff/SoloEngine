@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>P:/programing/Projects/SoloEngine/ToGitHub/Demo/source/Demo/Content/Arial.spritefont</SourceFile>
+  <SourceTime>2022-05-02T18:40:50.7149947+07:00</SourceTime>
+  <DestFile>P:/programing/Projects/SoloEngine/ToGitHub/Demo/source/Demo/Content/bin/DesktopGL/Content/Arial.xnb</DestFile>
+  <DestTime>2022-08-16T23:20:42.9519712+07:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2018-12-08T23:35:54+07:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2018-12-08T23:35:54+07:00</ProcessorTime>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Compressed</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

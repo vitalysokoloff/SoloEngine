@@ -1,0 +1,14 @@
+int: window_width: 1280
+int: window_height: 720
+int: music_volume: 100
+int: sound_volume: 100
+bool: full_screen: False
+bool: mouse_visibility: True
+string: window_title: Solo_Engine
+string: version: 0.1
+string: root_directory: Content
+ 
+// типы данных: int\bool\string
+// on\true\1\yes\+ - это true, всё остольное false
+// в string пробелы удаляются, поэтому вместо пробелов нужно ставить '_'.
+// в именах параметров пробелы удаляются, поэтому вместо пробелов нужно ставить '_', также символы переводятся в нижний регистр

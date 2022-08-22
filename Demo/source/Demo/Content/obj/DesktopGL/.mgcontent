@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>P:/programing/Projects/SoloEngine/ToGitHub/Demo/source/Demo/Content/Arial.spritefont</File>
+    <File>P:/programing/Projects/SoloEngine/ToGitHub/Demo/source/Demo/Content/bg1.png</File>
+    <File>P:/programing/Projects/SoloEngine/ToGitHub/Demo/source/Demo/Content/bg2.png</File>
+    <File>P:/programing/Projects/SoloEngine/ToGitHub/Demo/source/Demo/Content/gui.png</File>
+    <File>P:/programing/Projects/SoloEngine/ToGitHub/Demo/source/Demo/Content/intro.ogg</File>
+    <File>P:/programing/Projects/SoloEngine/ToGitHub/Demo/source/Demo/Content/mono_logo.png</File>
+    <File>P:/programing/Projects/SoloEngine/ToGitHub/Demo/source/Demo/Content/player.png</File>
+    <File>P:/programing/Projects/SoloEngine/ToGitHub/Demo/source/Demo/Content/solo_logo.png</File>
+    <File>P:/programing/Projects/SoloEngine/ToGitHub/Demo/source/Demo/Content/spritepack.png</File>
+    <File>P:/programing/Projects/SoloEngine/ToGitHub/Demo/source/Demo/Content/theme.ogg</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>P:/programing/Projects/SoloEngine/ToGitHub/Demo/source/Demo/Content/intro.ogg</SourceFile>
+  <SourceTime>2022-08-09T21:36:53.5448062+07:00</SourceTime>
+  <DestFile>P:/programing/Projects/SoloEngine/ToGitHub/Demo/source/Demo/Content/bin/DesktopGL/Content/intro.xnb</DestFile>
+  <DestTime>2022-08-16T20:49:38.4552682+07:00</DestTime>
+  <Importer>OggImporter</Importer>
+  <ImporterTime>2018-12-08T23:35:54+07:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2018-12-08T23:35:54+07:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>
