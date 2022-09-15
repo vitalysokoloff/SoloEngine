@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using Microsoft.Xna.Framework;
+using Solo.d2D;
 
 namespace Solo.Utils
 {
@@ -9,6 +11,9 @@ namespace Solo.Utils
         public Dictionary<string, int> Ints { get; private set; }
         public Dictionary<string, bool> Bools { get; private set; }
         public Dictionary<string, string> Strings { get; private set; }
+        public Dictionary<string, Vector2> Vectors { get; private set; }
+        public Dictionary<string, Point> Points { get; private set; }
+        public List<Tile> Tiles { get; private set; }
 
         /// <summary>
         /// The settings class for the game contains dynamic arrays of parameters of the following types: int, bool, string.
@@ -19,6 +24,9 @@ namespace Solo.Utils
             Ints = new Dictionary<string, int>();
             Bools = new Dictionary<string, bool>();
             Strings = new Dictionary<string, string>();
+            Vectors = new Dictionary<string, Vector2>();
+            Points = new Dictionary<string, Point>();
+            Tiles = new List<Tile>();
 
             using (StreamReader sr = new StreamReader(path))
             {
@@ -38,6 +46,15 @@ namespace Solo.Utils
                             break;
                         case "string":
                             Strings.Add(ReadString(tmp[1].ToLower()), ReadString(tmp[2]));
+                            break;
+                        case "vector":
+                            Vectors.Add(ReadString(tmp[1].ToLower()), new Vector2(ReadFloat(tmp[2]), ReadFloat(tmp[3])));
+                            break;
+                        case "point":
+                            Points.Add(ReadString(tmp[1].ToLower()), new Point(ReadInt(tmp[2]), ReadInt(tmp[3]))); ;
+                            break;
+                        case "tile":
+                            Tiles.Add(new Tile(ReadString(tmp[1].ToLower()), ReadInt(tmp[2]), ReadInt(tmp[3]), ReadFloat(tmp[4])));
                             break;
                     }
                 }
@@ -61,6 +78,21 @@ namespace Solo.Utils
                 foreach (string k in Strings.Keys)
                 {
                     sw.WriteLine("string: " + k.Replace(" ", "_") + ": " + Strings[k].Replace(" ", "_"));
+                }
+
+                foreach (string k in Vectors.Keys)
+                {
+                    sw.WriteLine("vector: " + k.Replace(" ", "_") + ": " + Vectors[k].X +":"+ Vectors[k].Y);
+                }
+
+                foreach (string k in Points.Keys)
+                {
+                    sw.WriteLine("point: " + k.Replace(" ", "_") + ": " + Points[k].X + ":" + Points[k].Y);
+                }
+
+                foreach (Tile t in Tiles)
+                {
+                    sw.WriteLine("tile: " + t.Name.Replace(" ", "_") + ": " + t.X + ":" + t.Y + ": " + t.Layer);
                 }
 
                 sw.WriteLine(" ");
@@ -95,6 +127,11 @@ namespace Solo.Utils
         private string ReadString(string str)
         {
             return str.Replace("_", " ");
+        }
+
+        private float ReadFloat(string str)
+        {
+            return (float)Convert.ToDouble(str);
         }
     }
 }

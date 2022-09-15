@@ -5,7 +5,7 @@ int: sound_volume: 100
 bool: full_screen: False
 bool: mouse_visibility: True
 string: window_title: Solo_Engine_DEMO
-string: version: 0.1
+string: version: 0.1.2
 string: root_directory: Content
  
 // типы данных: int\bool\string

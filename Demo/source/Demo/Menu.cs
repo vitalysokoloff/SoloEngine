@@ -99,16 +99,8 @@ namespace Demo
             gui.ButtonsReset(); // [Обязательно] перед вызовом кнопок
             //Отрисовка интерфейса
             spriteBatch.Begin(SpriteSortMode.FrontToBack); 
-            gui.Label(spriteBatch, new Vector2(cfg.Ints["window width"] / 2 - 105, 175), cfg.Strings["window title"] + " " + cfg.Strings["version"], textures, true);
-            spriteBatch.Draw(textures["gui"], new Rectangle(cfg.Ints["window width"] / 2 - 110, 200, 10, 10), new Rectangle(16, 0, 10, 10), Color.White);
-            spriteBatch.Draw(textures["gui"], new Rectangle(cfg.Ints["window width"] / 2 - 100, 200, 200, 10), new Rectangle(26, 0, 25, 10), Color.White);
-            spriteBatch.Draw(textures["gui"], new Rectangle(cfg.Ints["window width"] / 2 + 100, 200, 10, 10), new Rectangle(50, 0, 10, 10), Color.White);
-            spriteBatch.Draw(textures["gui"], new Rectangle(cfg.Ints["window width"] / 2 - 100, 210, 200, 24), new Rectangle(0, 32, 8, 8), Color.White);
-            spriteBatch.Draw(textures["gui"], new Rectangle(cfg.Ints["window width"] / 2 - 110, 210, 10, 192), new Rectangle(16, 10, 10, 25), Color.White);
-            spriteBatch.Draw(textures["gui"], new Rectangle(cfg.Ints["window width"] / 2 + 100, 210, 10, 192), new Rectangle(50, 10, 10, 25), Color.White);
-            spriteBatch.Draw(textures["gui"], new Rectangle(cfg.Ints["window width"] / 2 - 110, 402, 10, 10), new Rectangle(16, 35, 10, 10), Color.White);
-            spriteBatch.Draw(textures["gui"], new Rectangle(cfg.Ints["window width"] / 2 - 100, 402, 200, 10), new Rectangle(26, 35, 25, 10), Color.White);
-            spriteBatch.Draw(textures["gui"], new Rectangle(cfg.Ints["window width"] / 2 + 100, 402, 10, 10), new Rectangle(50, 35, 10, 10), Color.White);
+            gui.Label(spriteBatch, new Vector2(cfg.Ints["window width"] / 2 - 115, 175), cfg.Strings["window title"] + " " + cfg.Strings["version"], textures, true);            
+            gui.Frame(spriteBatch, new Rectangle(cfg.Ints["window width"] / 2 - 110, 200, 220, 212),textures);
             gui.Label(spriteBatch, new Vector2(cfg.Ints["window width"] / 2 - 100, 210), "Громкость: " + cfg.Ints["sound volume"], textures, true);
             if (cfg.Ints["sound volume"] != 0)
             {

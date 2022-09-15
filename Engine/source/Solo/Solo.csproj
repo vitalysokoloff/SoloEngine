@@ -42,6 +42,7 @@
     <Compile Include="Solo.d2D.Camera2D.cs" />
     <Compile Include="Solo.d2D.GameObject.cs" />
     <Compile Include="Solo.d2D.Scene.cs" />
+    <Compile Include="Solo.d2D.Tile.cs" />
     <Compile Include="Solo.GUI.GUIManager.cs" />
     <Compile Include="Solo.GUI.Style.cs" />
     <Compile Include="Solo.Physics2D.GJK.cs" />

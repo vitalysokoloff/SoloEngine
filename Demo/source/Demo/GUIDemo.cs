@@ -28,6 +28,7 @@ namespace Demo
                 base.Init(content, graphics); // [Обязательно] Запускаем стандартный Start
                 camera = new Camera2D(0, Vector2.Zero, new Point(cfg.Ints["window width"], cfg.Ints["window height"])); // [Обязательно]  инициализация камеры
                 textures.Add("gui", content.Load<Texture2D>("gui")); // текстура с gui
+                textures.Add("spritepack", content.Load<Texture2D>("spritepack")); // текстура с тайлами
 
                 SpriteFont font = content.Load<SpriteFont>("Arial");
                 style = new GUIStyle("style", "gui", font); // для стиля GUI необходимо указать имя текстуры в массиве с текстурами и шрифт
@@ -63,6 +64,10 @@ namespace Demo
             gui.Label(spriteBatch, new Vector2(290, 120), "gui.Button(spriteBatch, new Rectangle(20, 120, 250, 24), \"Button without notice\", null, textures);", textures, true);
             gui.ButtonBlocked(spriteBatch, new Rectangle(20, 150, 250, 24), "Button blocked", textures);
             gui.Label(spriteBatch, new Vector2(290, 150), "gui.ButtonBlocked(spriteBatch, new Rectangle(20, 150, 250, 24), \"Button blocked\", textures);", textures, true);
+            gui.Button(spriteBatch, new Rectangle(20, 180, 40, 40), "Button with icon", new Rectangle(0, 128, 64, 64), "spritepack", textures);
+            gui.Label(spriteBatch, new Vector2(290, 180), "gui.Button(spriteBatch, new Rectangle(20, 180, 40, 40),\"Button with icon\",\n new Rectangle(0, 128, 64, 64), \"spritepack\", textures);", textures, true);
+            gui.Frame(spriteBatch, new Rectangle(20, 230, 250, 40), textures);
+            gui.Label(spriteBatch, new Vector2(290, 230), "gui.Frame(spriteBatch, new Rectangle(20, 230, 250, 40), textures);", textures, true);
 
             gui.Label(spriteBatch, new Vector2(cfg.Ints["window width"] / 2 - style.Font.MeasureString(label).X / 2, cfg.Ints["window height"] - 35), label, textures, true);
             spriteBatch.End();

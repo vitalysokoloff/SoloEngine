@@ -55,6 +55,31 @@ namespace Solo.GUI
             button_unhovered?.Invoke();
         }
 
+        public void Frame(SpriteBatch spriteBatch, Rectangle collider, Dictionary<string, Texture2D> textures)
+        {
+            spriteBatch.Draw(textures[Style.TextureName], collider, Style.Notice, Color.White, 0f, Vector2.Zero, SpriteEffects.None, 0.7f);
+
+            spriteBatch.Draw(textures[Style.TextureName], new Rectangle(collider.X, collider.Y, Style.FrameTopLeft.Width, Style.FrameTopLeft.Height), 
+                                                                        Style.FrameTopLeft, Color.White, 0f, Vector2.Zero, SpriteEffects.None, 0.8f);
+            spriteBatch.Draw(textures[Style.TextureName], new Rectangle(collider.X + Style.FrameTopLeft.Width, collider.Y, collider.Width - Style.FrameTopLeft.Width - Style.FrameTopRight.Width, Style.FrameTop.Height), 
+                                                                        Style.FrameTop, Color.White, 0f, Vector2.Zero, SpriteEffects.None, 0.8f);
+            spriteBatch.Draw(textures[Style.TextureName], new Rectangle(collider.Right - Style.FrameTopRight.Width, collider.Y, Style.FrameTopRight.Width, Style.FrameTopRight.Height),
+                                                                        Style.FrameTopRight, Color.White, 0f, Vector2.Zero, SpriteEffects.None, 0.8f);
+
+            spriteBatch.Draw(textures[Style.TextureName], new Rectangle(collider.X, collider.Y + Style.FrameLeft.Height, Style.FrameLeft.Width, collider.Height - Style.FrameTopLeft.Height - Style.FrameBottomLeft.Height),
+                                                                        Style.FrameLeft, Color.White, 0f, Vector2.Zero, SpriteEffects.None, 0.8f);
+            spriteBatch.Draw(textures[Style.TextureName], new Rectangle(collider.Right - Style.FrameRight.Width, collider.Y + Style.FrameRight.Height, Style.FrameRight.Width, collider.Height - Style.FrameTopRight.Height - Style.FrameBottomRight.Height),
+                                                                        Style.FrameRight, Color.White, 0f, Vector2.Zero, SpriteEffects.None, 0.8f);
+
+
+            spriteBatch.Draw(textures[Style.TextureName], new Rectangle(collider.X, collider.Bottom - Style.FrameBottomLeft.Height, Style.FrameBottomLeft.Width, Style.FrameBottomLeft.Height),
+                                                                        Style.FrameBottomLeft, Color.White, 0f, Vector2.Zero, SpriteEffects.None, 0.8f);
+            spriteBatch.Draw(textures[Style.TextureName], new Rectangle(collider.X + Style.FrameBottomLeft.Width, collider.Bottom - Style.FrameBottom.Height, collider.Width - Style.FrameBottomLeft.Width - Style.FrameBottomRight.Width, Style.FrameBottom.Height),
+                                                                        Style.FrameBottom, Color.White, 0f, Vector2.Zero, SpriteEffects.None, 0.8f);
+            spriteBatch.Draw(textures[Style.TextureName], new Rectangle(collider.Right - Style.FrameBottomRight.Width, collider.Bottom - Style.FrameBottomRight.Height, Style.FrameBottomRight.Width, Style.FrameBottomRight.Height),
+                                                                        Style.FrameBottomRight, Color.White, 0f, Vector2.Zero, SpriteEffects.None, 0.8f);
+        }
+
         public bool Button(SpriteBatch spriteBatch, Rectangle collider, string text, string note, Dictionary<string, Texture2D> textures)
         {
             if (!Check_hover(collider))
@@ -111,6 +136,13 @@ namespace Solo.GUI
                 APressed = false;
             }
             return false;
+        }
+
+        public bool Button(SpriteBatch spriteBatch, Rectangle collider, string note, Rectangle iconSourceRectangle, string iconTextureName, Dictionary<string, Texture2D> textures)
+        {
+            bool r = Button(spriteBatch, collider, "", note, textures);
+            spriteBatch.Draw(textures[iconTextureName], new Rectangle(collider.X + 5, collider.Y +5, collider.Width - 10, collider.Height - 10), iconSourceRectangle, Color.White, 0f, Vector2.Zero, SpriteEffects.None, 0.93f);
+            return r;
         }
 
         public void ButtonBlocked(SpriteBatch spriteBatch, Rectangle collider, string text, Dictionary<string, Texture2D> textures)
